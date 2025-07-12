@@ -1,17 +1,20 @@
-
-.hero{
+.hero {
     gap: 200px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(to bottom, #ff5e00,  #ff5722 );
+    background: linear-gradient(to bottom, #ff5e00, #ff5722);
     height: 80vh;
+    padding: 20px;
+    flex-wrap: wrap;
 }
-img{
+img {
     width: 30%;
+    max-width: 100%;
+    height: auto;
 }
-.hero-content{
-    width: 500px;
+.hero-content {
+    max-width: 500px;
     display: flex;
     flex-direction: column;
     gap: 30px;
@@ -22,17 +25,20 @@ img{
 .hero-button {
     display: flex;
     align-items: center;
-    gap:40px ;
+    gap: 40px;
+    flex-wrap: wrap;
 }
-.button1,.button2 {
+.button1,
+.button2 {
     padding: 10px 20px;
     border-radius: 5px;
     font-weight: 600;
     text-decoration: none;
     cursor: pointer;
+    white-space: nowrap;
 }
 .button1 {
-background-color: #ffffff;
+    background-color: #ffffff;
     color: #ff5722;
     transition: all 0.3s;
 }
@@ -45,9 +51,115 @@ background-color: #ffffff;
 .button1:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transform: translateY(-5px);
-    
 }
 .button2:hover {
     background-color: #ffffff;
     color: #ff5722;
+}
+.brands {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 50px;
+    margin-top: 100px;
+    padding: 0 20px;
+    text-align: center;
+}
+.brand-logos {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 0px;
+}
+.brand-logo {
+    width: 180px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-radius: 10px;
+    border: 1px solid #ff5722;
+    align-items: center;
+    justify-content: center;
+    color: #ff5e00;
+    transition: all 0.5s;
+    padding: 20px;
+    cursor: pointer;
+}
+.brand-logo img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+.brand-logo:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(to bottom, #ff5e00, #ff5722);
+    color: #ffffff;
+    font-size: larger;
+    font-weight: 600;
+}
+
+@media screen and (max-width: 1024px) {
+    .hero {
+        gap: 50px;
+        flex-direction: column-reverse;
+        height: auto;
+        padding: 40px 20px;
+        text-align: center;
+    }
+
+    .hero-content {
+        font-size: medium;
+        width: 100%;
+    }
+
+    .hero img {
+        width: 60%;
+    }
+
+    .brand-logos {
+        gap: 30px;
+        padding: 50px 0px;
+    }
+
+    .brand-logo {
+        width: 150px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .hero-content h1 {
+        font-size: 24px;
+    }
+
+    .hero-content p {
+        font-size: 14px;
+    }
+
+    .hero-button {
+        gap: 20px;
+    }
+
+    .button1,
+    .button2 {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    .brand-logo {
+        width: 120px;
+    }
+
+    .brands h1 {
+        font-size: 24px;
+    }
+
+    .brands p {
+        font-size: 14px;
+    }
 }
