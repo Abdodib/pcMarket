@@ -103,6 +103,20 @@ img {
     font-size: larger;
     font-weight: 600;
 }
+.Deals {
+    display: flex;
+    flex-direction: column;
+
+    gap: 50px;
+    padding: 100px 20px;
+    text-align: center;
+}
+.deals-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
 
 @media screen and (max-width: 1024px) {
     .hero {

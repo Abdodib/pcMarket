@@ -30,6 +30,26 @@ const Home = () => {
         { name: 'Cooler Master', logo: cooler_master },
         { name: 'Thermaltake', logo: thermaltake },
     ];
+const intl = new Intl.NumberFormat('en-US', {
+    style: 'currency',
+    currency: 'DZD',
+});
+
+const deals = [
+    {
+        image: 'deal1.png',
+        title: 'Deal 1',
+        nowPrice: intl.format(17000),
+        oldPrice: intl.format(20000)
+    },
+    {
+        image: 'deal2.png',
+        title: 'Deal 2',
+        nowPrice: intl.format(15000),
+        oldPrice: intl.format(18000)
+    }
+
+];
 
     return (
         <>
@@ -53,6 +73,19 @@ const Home = () => {
                         <div className="brand-logo" key={index}>
                             <img src={brand.logo} alt={brand.name} />
                             <p>{brand.name}</p>
+                        </div>
+                    ))}
+                </div>
+            </div>
+            <div className="Deals">
+                <h1>Exclusive Deals</h1>
+                <div className="deals-content">
+                    {deals.map((deal, index) => (
+                        <div className="deal" key={index}>
+                            <img src={deal.image} alt={deal.title} />
+                            <h2>{deal.title}</h2>
+                            <p className="now-price">{deal.nowPrice}</p>
+                            <p className="old-price">{deal.oldPrice}</p>
                         </div>
                     ))}
                 </div>
