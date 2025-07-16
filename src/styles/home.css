@@ -1,5 +1,6 @@
 .hero {
     gap: 200px;
+    margin-top: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -106,16 +107,63 @@ img {
 .Deals {
     display: flex;
     flex-direction: column;
-
+background: linear-gradient(to bottom, #ff5e00, #ff5722);
     gap: 50px;
     padding: 100px 20px;
     text-align: center;
 }
 .deals-content {
     display: flex;
-    flex-wrap: wrap;
+   align-items: center;
     gap: 30px;
     justify-content: center;
+}
+.deal {
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 10px;
+    padding: 50px;
+    width: 650px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align:left;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.deal img {
+    width: 250px;
+    margin-left: 100px;
+    height: auto;
+    border-radius: 10px;
+}
+.price {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+.now-price {
+    font-size: 1.5rem;
+    color: #ff5722;
+    font-weight: bold;
+}
+.old-price {
+    font-size: 1.2rem;
+    text-decoration: line-through;
+    color: #999999;
+}
+.buy-button {
+   background: linear-gradient(to bottom, #ff5722 , #f08000);
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
+}
+.buy-button:hover {
+    background: linear-gradient(to bottom, #f08000, #ff5722);
+    transform: scale(1.05);
 }
 
 @media screen and (max-width: 1024px) {
@@ -147,6 +195,9 @@ img {
 }
 
 @media screen and (max-width: 600px) {
+    .hero {
+        margin-top: 80px;
+    }
     .hero-content h1 {
         font-size: 24px;
     }

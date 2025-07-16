@@ -11,6 +11,9 @@ import msi from "../assets/msi.png";
 import gigabyte from "../assets/gigabyt.png";
 import cooler_master from "../assets/cooler master.png";
 import thermaltake from "../assets/Tt.png";
+import deal1 from "../assets/deal1.jpg";
+import deal2 from "../assets/deal2.jpg";
+import { TiShoppingCart } from "react-icons/ti";
 
 const Home = () => {
     const navigate = useNavigate();
@@ -37,14 +40,14 @@ const intl = new Intl.NumberFormat('en-US', {
 
 const deals = [
     {
-        image: 'deal1.png',
-        title: 'Deal 1',
+        image: deal1,
+        title: 'rtx 3070',
         nowPrice: intl.format(17000),
         oldPrice: intl.format(20000)
     },
     {
-        image: 'deal2.png',
-        title: 'Deal 2',
+        image: deal2,
+        title: 'rx 6600 xt ',
         nowPrice: intl.format(15000),
         oldPrice: intl.format(18000)
     }
@@ -84,8 +87,11 @@ const deals = [
                         <div className="deal" key={index}>
                             <img src={deal.image} alt={deal.title} />
                             <h2>{deal.title}</h2>
+                            <div className="price">
                             <p className="now-price">{deal.nowPrice}</p>
                             <p className="old-price">{deal.oldPrice}</p>
+                            </div>
+                            <button className="buy-button"><TiShoppingCart />add to cart</button>
                         </div>
                     ))}
                 </div>
