@@ -1,0 +1,64 @@
+.hero-product {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding-left: 200px;
+    padding-top: 80px; ;
+    background: linear-gradient(to right, #ff5722, #ff9100);
+    gap: 40px;
+    color: #ffffff;
+    margin: 100px 0px 50px 0px;
+    height: 40vh;
+}
+.hero-product h1 {
+    font-size: 3rem;
+}
+.hero-product p {
+    font-size: 1.2rem;
+    max-width: 600px;
+}
+.categories-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+margin-bottom: 50px;
+}
+.categories {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: flex-start;
+    padding: 0px 75px;
+    margin: 20px 0;
+}
+.categorie{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    width: 150px;
+    height: 150px;
+    gap: 30px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 3px solid #f0f0f0;
+    transition:  all 0.3s ease;
+}
+.categorie h3 {
+    font-size: 3rem;
+    color: #ff5900;
+}
+.categorie:hover {
+    border: 3px solid #f18a2a;
+    box-shadow: #f18a2a 0px 0px 5px;
+    transform: translateY(-5px);
+}
+.active {
+    border: 3px solid #f18a2a;
+    box-shadow: #f18a2a 0px 0px 5px;
+}

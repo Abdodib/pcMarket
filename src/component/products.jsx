@@ -2,6 +2,11 @@ import React, { useState } from 'react';
 import { MdOutlineHorizontalSplit } from "react-icons/md";
 import { MdOutlineVerticalSplit } from "react-icons/md";
 import { FaFilter } from "react-icons/fa";
+import '../styles/products.css';
+import { FaPowerOff , FaMemory} from "react-icons/fa6";
+import { BsMotherboard , BsGpuCard , BsCpu , BsSdCard , BsMouse2 ,BsKeyboard , BsPc } from "react-icons/bs";
+import { MdMonitor , MdSevereCold } from "react-icons/md";
+import { IoIosLaptop } from "react-icons/io";
 const Products = () => {
 
     const intl = new Intl.NumberFormat('en-US', {
@@ -12,12 +17,26 @@ const Products = () => {
 const [filter,setFilter ] = useState(false);
 const [sortBy, setSortBy] = useState('Feautured');
 const [showtype, setShowType] = useState('horizontal');
-const [maxPrice, setMaxPrice] = useState(intl.format(50000));
+const [maxPrice, setMaxPrice] = useState(intl.format(5000000));
 const [minPrice, setMinPrice] = useState(intl.format(0));
 const [selectBrand, setSelectBrand] = useState([]);
 const [search, setSearch] = useState('');
 const [category, setCategory] = useState('all');
-const categories = ['all', 'Laptop', 'Processor', 'Graphics Card', 'RAM', 'Storage', 'Mouse'];
+const categories = [
+    { name: 'All', icon: <FaPowerOff /> },
+    { name: 'Laptop', icon: <IoIosLaptop /> },
+    { name: 'Processor', icon: <BsCpu /> },
+    { name: 'Graphics Card', icon: <BsGpuCard /> },
+    { name: 'RAM', icon: <FaMemory /> },
+    { name: 'Storage', icon: <BsSdCard /> },
+    { name: 'Mouse', icon: <BsMouse2 /> },
+    { name: 'Keyboard', icon: <BsKeyboard /> },
+    { name: 'Motherboard', icon: <BsMotherboard /> },
+    { name: 'Power Supply', icon: <FaPowerOff /> },
+    { name: 'Cooling', icon: <MdSevereCold /> },
+    { name: 'Monitor', icon: <MdMonitor /> },
+    { name: 'PC Case', icon: <BsPc /> }
+];
 const products = [
      
   {
@@ -38,6 +57,7 @@ const products = [
     "brand": "intel",
     "price": 95000,
     "stock": 8,
+    "rate" : 4.8,
     "description": "13th Gen, 16 Cores, 5.4 GHz Turbo, LGA1700",
     "image": "/images/intel-i7-13700k.jpg"
   },
@@ -48,6 +68,7 @@ const products = [
     "brand": "NVIDIA",
     "price": 195000,
     "stock": 5,
+    "rate" : 4.9,
     "description": "12GB GDDR6X, Ray Tracing, DLSS 3, PCIe 4.0",
     "image": "/images/rtx-4070ti.jpg"
   },
@@ -93,13 +114,17 @@ const products = [
         <h1>Products</h1>
         <p>Explore our wide range of products</p>
     </div>
+    <div className="categories-section">
+      <h1>Shop by Category</h1>
     <div className="categories">
-        {categories.map((category, index) => (
-            <div className="category" key={index} onClick={() => setCategory(category)}>
-                <h2>{category}</h2>
+        {categories.map((categorye, index) => (
+            <div className={`categorie ${category.toLowerCase() === categorye.name.toLowerCase() ? 'active' : ''}`} key={index} onClick={() => setCategory(categorye.name.toLowerCase())}>
+                <h3>{categorye.icon}</h3>
+                <p>{categorye.name}</p>
             </div>
             
         ))}
+    </div>
     </div>
     <div className="product-nav">
         <h2>
@@ -163,7 +188,7 @@ const products = [
           {
             products
               .filter(product => 
-                (category === 'all' || product.category === category) &&
+                (category.toLowerCase() === 'all' || product.category.toLowerCase() === category) &&
                 (search === '' || product.name.toLowerCase().includes(search.toLowerCase())) &&
                 (selectBrand.length === 0 || selectBrand.some(brand => brand.toLowerCase() === product.brand.toLowerCase())) &&
                 (parseFloat(product.price) >= parseFloat(minPrice.replace(/[^0-9.-]+/g,"")) && parseFloat(product.price) <= parseFloat(maxPrice.replace(/[^0-9.-]+/g,"")))
