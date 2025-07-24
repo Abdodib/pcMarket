@@ -98,7 +98,7 @@ const products = [
     "id": 6,
     "name": "Logitech G502 Hero",
     "category": "Mouse",
-    "brand": "Logitech",
+    "brand": "Corsair",
     "price": 7500,
     "stock": 30,
     "rate" : 4.8,
@@ -127,28 +127,28 @@ const products = [
     </div>
     </div>
     <div className="product-nav">
-        <h2>
+        <h1>
             products  ({products.length})
-        </h2>
+        </h1>
 <div className="select">
-    <input type="text" placeholder="Search products..."  value={search} onChange={(e) => setSearch(e.target.value)} />
-    <button onClick={() => setFilter(!filter)}><FaFilter /> Filter</button>
+    <input type="text" placeholder="Search products..."  value={search} onChange={(e) => setSearch(e.target.value)} className=' search' />
+    <button onClick={() => setFilter(!filter)} className='filter-button'><FaFilter /> Filter</button>
     <div className="ver-hor">
   <button
-    className={`horizontal ${showtype === 'horizontal' ? 'active' : ''}`}
+    className={`horizontal ${showtype === 'horizontal' ? 'activebutton' : ''}`}
     onClick={() => setShowType('horizontal')}
   >
     <MdOutlineHorizontalSplit />
   </button>
 
   <button
-    className={`vertical ${showtype === 'vertical' ? 'active' : ''}`}
+    className={`vertical ${showtype === 'vertical' ? 'activebutton' : ''}`}
     onClick={() => setShowType('vertical')}
   >
     <MdOutlineVerticalSplit />
   </button>
 </div>
-    <select value={sortBy} onChange={(e) => setSortBy(e.target.value)}>
+    <select value={sortBy} onChange={(e) => setSortBy(e.target.value)} className='sort'>
         <option value="Feautured">Feautured</option>
         <option value="Price: Low to High">Price: Low to High</option>
         <option value="Price: High to Low">Price: High to Low</option>
@@ -159,7 +159,7 @@ const products = [
 </div>
     </div>
     <div className="products-section">
-        <div className={ filter ? 'filter active' : 'filter'}>
+        <div className={ filter ? 'filter-active' : 'filter'}>
             <h2> price</h2>
             <label htmlFor="max">Max Price</label>
             <input type="text" id='max' value={maxPrice} onChange={(e) => setMaxPrice(e.target.value)} />
@@ -201,20 +201,23 @@ const products = [
                 return 0; 
               })
               .map((product) => (
-                <div className={`product ${showtype}`} key={product.id}>
+                <div className= {showtype === 'horizontal' ? 'product-horizontal' : 'product-vertical'} key={product.id}>
                   <img src={product.image} alt={product.name} />
+                  <div>
+                  <div className="name">
                   <h3>{product.name}</h3>
                   <p>{intl.format(product.price)}</p>
+                  </div>
+                  <div className="description">
                   <p>{product.description}</p>
                   <p>Rating: {product.rate}</p>
+                  </div>
+                  </div>
                 </div>
               ))
           }
         </div>
     </div>
-        
-
-    
     </>
     );
 }
