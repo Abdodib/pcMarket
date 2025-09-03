@@ -4,6 +4,8 @@ import './styles/app.css'
 import Navbar from './component/navbar'
 import Home from './component/home'
 import Products from './component/products'
+import Build from './component/build'
+import SupportPage from './component/support'
 
 function App() {
   return (
@@ -12,6 +14,8 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/product' element={<Products />} />
+        <Route path='/build' element={<Build />} />
+        <Route path='/support' element={<SupportPage />} />
       </Routes>
     </Router>
   )

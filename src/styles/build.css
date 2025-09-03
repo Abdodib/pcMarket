@@ -1,0 +1,226 @@
+/* General container */
+.build-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.build-container h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.build-container p {
+  color: #666;
+  font-size: 1rem;
+}
+
+/* Progress bar */
+.progress-bar {
+  width: 80%;
+  height: 12px;
+  background: #eee;
+  border-radius: 8px;
+  margin: 10px auto;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #00c853, #1de9b6);
+  transition: width 0.3s ease;
+}
+
+/* Build step layout */
+.build-step {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Steps sidebar */
+.configue {
+  flex: 1;
+  max-width: 250px;
+  border-right: 2px solid #ddd;
+  padding-right: 20px;
+}
+
+.configue p {
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.step {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.step:hover {
+  background: #f5f5f5;
+}
+
+.step.selected {
+  border-color: #1de9b6;
+  background: #e0f7fa;
+}
+
+.step-selected {
+  border-color: #00c853;
+  background: #e8f5e9;
+}
+
+.step .icon {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.step p {
+  flex: 1;
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.required {
+  color: #d32f2f;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.optional {
+  color: #777;
+  font-size: 0.8rem;
+}
+
+/* Product selection area */
+.select-configue {
+  flex: 3;
+}
+
+.select-configue h2 {
+  margin-bottom: 5px;
+  font-size: 1.5rem;
+}
+
+.select-configue p {
+  margin-bottom: 15px;
+  color: #666;
+}
+
+/* Product cards */
+.product-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 12px;
+  margin-bottom: 15px;
+  transition: all 0.2s ease;
+}
+
+.product-item:hover {
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-selected {
+  border: 2px solid #00c853;
+  background: #f1fff6;
+}
+
+.product-item img {
+  width: 100px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.product-item h3 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.product-item p {
+  font-size: 0.9rem;
+  color: #555;
+  margin: 4px 0;
+}
+
+.pricipal {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 6px;
+}
+
+.pricipal span {
+  font-weight: bold;
+  color: #333;
+}
+
+/* Buttons */
+.select-details button {
+  padding: 6px 14px;
+  border: 1px solid #00c853;
+  border-radius: 6px;
+  background: white;
+  color: #00c853;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.select-details button:hover {
+  background: #00c853;
+  color: white;
+}
+
+.btn-selected {
+  background: #00c853 !important;
+  color: white !important;
+}
+
+/* Build summary */
+.build-summary {
+  margin: 30px 20px;
+  padding: 20px;
+  border-top: 2px solid #ddd;
+}
+
+.build-summary h2 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.summary-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  border-bottom: 1px solid #eee;
+  padding: 10px 0;
+}
+
+.summary-item img {
+  width: 60px;
+  border-radius: 6px;
+}
+
+.summary-item h3 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.summary-item p {
+  margin: 2px 0;
+  color: #333;
+}
+
+.build-summary h3 {
+  margin-top: 15px;
+  font-size: 1.3rem;
+  color: #00c853;
+}

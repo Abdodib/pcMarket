@@ -20,7 +20,7 @@ const Navbar = () => {
       <ul className={`nav-links ${isOpen ? "open" : ""}`}>
         <li><Link to="/"><h2> Home</h2></Link></li>
         <li><Link to="/product"><h2>Product</h2></Link></li>
-        <li><Link to="/deals"><h2>Deals</h2></Link></li>
+        <li><Link to="/build"><h2>build your pc</h2></Link></li>
         <li><Link to="/support"><h2>Support</h2></Link></li>
         <li><Link to="/admin" className="admin"><h2><MdAdminPanelSettings />Admin</h2></Link></li>
         <div className="nav-icons">

@@ -209,8 +209,8 @@ const products = [
                   <p>{intl.format(product.price)}</p>
                   </div>
                   <div className="description">
-                  <p>{product.description}</p>
                   <p>Rating: {product.rate}</p>
+                  <p>{intl.format(product.price)}</p>
                   </div>
                   </div>
                 </div>

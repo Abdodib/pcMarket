@@ -62,7 +62,7 @@ const deals = [
                     <p>Discover the latest components and build the ultimate gaming rig with our premium selection of CPUs, GPUs, and more.</p>
                     <div className="hero-button">
                         <p className="button1" onClick={handleButton1Click}>Shop Now</p>
-                        <p className="button2">Build guide</p>
+                        <p className="button2">Build your PC</p>
                     </div>
                 </div>
                 <img src={hero_image} alt="Hero" />
