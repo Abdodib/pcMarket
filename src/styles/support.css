@@ -13,8 +13,9 @@
 
 /* ===== Header ===== */
 .page-header {
-  background: linear-gradient(135deg, #4f46e5, #6366f1);
+  background: linear-gradient(135deg, #ff5722, #cb3b07);
   color: white;
+  margin-top: 40px;
   text-align: center;
   padding: 4rem 1rem 3rem;
 }
@@ -54,7 +55,7 @@
 }
 
 .support-icon {
-  color: #4f46e5;
+  color: #ff5722;
   margin-bottom: 1rem;
 }
 
@@ -108,12 +109,12 @@
 }
 
 .support-btn.primary {
-  background: #4f46e5;
+  background: #ff5722;
   color: #fff;
 }
 
 .support-btn.primary:hover {
-  background: #4338ca;
+  background: #ff5722;
 }
 
 .support-btn.secondary {
@@ -147,7 +148,7 @@
 }
 
 .support-tabs button.active {
-  background: #4f46e5;
+  background: #ff5722;
   color: white;
 }
 
@@ -219,7 +220,7 @@
   align-items: center;
   gap: 0.4rem;
   font-size: 0.85rem;
-  color: #4f46e5;
+  color: #ff5722;
   margin-bottom: 0.5rem;
 }
 
@@ -238,7 +239,7 @@
 .guide-link {
   background: none;
   border: none;
-  color: #4f46e5;
+  color: #ff5722;
   font-weight: 500;
   cursor: pointer;
 }
@@ -274,7 +275,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: rgba(79, 70, 229, 0.8);
+  background: #ff5722;
   border-radius: 50%;
   padding: 0.5rem;
   color: #fff;
@@ -293,7 +294,7 @@
 .stat-item .stat-number {
   font-size: 1.8rem;
   font-weight: bold;
-  color: #4f46e5;
+  color: #ff5722;
 }
 
 .stat-item .stat-label {
@@ -320,7 +321,7 @@
 .feature-btn {
   margin-top: 0.8rem;
   border: none;
-  background: #4f46e5;
+  background: #ff5722;
   color: white;
   padding: 0.6rem 1.2rem;
   border-radius: 6px;
@@ -328,7 +329,7 @@
 }
 
 .feature-btn:hover {
-  background: #4338ca;
+  background: #ff5722;
 }
 
 /* ===== Contact Form ===== */
@@ -385,7 +386,7 @@
 }
 
 .submit-btn {
-  background: #4f46e5;
+  background: #ff5722;
   color: white;
   border: none;
   border-radius: 6px;
@@ -397,5 +398,5 @@
 }
 
 .submit-btn:hover {
-  background: #4338ca;
+  background: #ff5722;
 }
