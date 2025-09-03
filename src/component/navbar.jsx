@@ -22,7 +22,6 @@ const Navbar = () => {
         <li><Link to="/product"><h2>Product</h2></Link></li>
         <li><Link to="/build"><h2>build your pc</h2></Link></li>
         <li><Link to="/support"><h2>Support</h2></Link></li>
-        <li><Link to="/admin" className="admin"><h2><MdAdminPanelSettings />Admin</h2></Link></li>
         <div className="nav-icons">
         <li><Link to="/account"><h3><FaUser/></h3></Link></li>
         <li><Link to="/cart"><h3> <FaShoppingCart/></h3></Link></li>
