@@ -12,9 +12,15 @@ import {
   ChevronRight,
   Search,
 } from "lucide-react"
+import { createFileRoute } from "@tanstack/react-router"
 import "../styles/support.css"
 
-export default function SupportPage() {
+// ✅ Register this file as the /support route
+export const Route = createFileRoute("/support")({
+  component: SupportPage,
+})
+
+function SupportPage() {
   const [activeTab, setActiveTab] = useState("faq")
   const [expandedFaq, setExpandedFaq] = useState(null)
   const [searchQuery, setSearchQuery] = useState("")
@@ -61,6 +67,7 @@ export default function SupportPage() {
               <div className="support-status online"><div className="status-dot"></div><span>Online Now</span></div>
               <button className="support-btn primary">Start Chat</button>
             </div>
+
             <div className="support-card">
               <div className="support-icon"><Phone size={32} /></div>
               <h3>Phone Support</h3>
@@ -68,6 +75,7 @@ export default function SupportPage() {
               <div className="support-hours"><Clock size={16} /><span>Mon-Fri 9AM-6PM EST</span></div>
               <button className="support-btn secondary">Call Now</button>
             </div>
+
             <div className="support-card">
               <div className="support-icon"><Mail size={32} /></div>
               <h3>Email Support</h3>
@@ -93,7 +101,12 @@ export default function SupportPage() {
             <div className="faq-section">
               <div className="faq-search">
                 <Search size={20} />
-                <input type="text" placeholder="Search frequently asked questions..." value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} />
+                <input
+                  type="text"
+                  placeholder="Search frequently asked questions..."
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                />
               </div>
               <div className="faq-list">
                 {filteredFaqs.map((faq) => (
@@ -114,10 +127,16 @@ export default function SupportPage() {
               <div className="guides-grid">
                 {guides.map((guide, index) => (
                   <div key={index} className="guide-card">
-                    <div className="guide-type">{guide.type === "Video" ? <Video size={16} /> : <FileText size={16} />}<span>{guide.type}</span></div>
+                    <div className="guide-type">
+                      {guide.type === "Video" ? <Video size={16} /> : <FileText size={16} />}
+                      <span>{guide.type}</span>
+                    </div>
                     <h3>{guide.title}</h3>
                     <p>{guide.description}</p>
-                    <div className="guide-meta"><span className="duration">{guide.duration}</span><button className="guide-link">Read More</button></div>
+                    <div className="guide-meta">
+                      <span className="duration">{guide.duration}</span>
+                      <button className="guide-link">Read More</button>
+                    </div>
                   </div>
                 ))}
               </div>
@@ -171,7 +190,8 @@ export default function SupportPage() {
                 <div className="form-group"><label>Name</label><input type="text" required /></div>
                 <div className="form-group"><label>Email</label><input type="email" required /></div>
               </div>
-              <div className="form-group"><label>Subject</label>
+              <div className="form-group">
+                <label>Subject</label>
                 <select required>
                   <option value="">Select a topic</option>
                   <option value="order">Order Issue</option>
@@ -181,7 +201,10 @@ export default function SupportPage() {
                   <option value="other">Other</option>
                 </select>
               </div>
-              <div className="form-group"><label>Message</label><textarea rows="5" required placeholder="Please describe your issue or question in detail..."></textarea></div>
+              <div className="form-group">
+                <label>Message</label>
+                <textarea rows="5" required placeholder="Please describe your issue or question in detail..."></textarea>
+              </div>
               <button type="submit" className="submit-btn">Send Message</button>
             </form>
           </div>

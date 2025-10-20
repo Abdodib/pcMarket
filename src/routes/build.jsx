@@ -3,8 +3,13 @@ import { FaPowerOff, FaMemory } from "react-icons/fa6";
 import { BsMotherboard, BsGpuCard, BsCpu, BsSdCard, BsPc } from "react-icons/bs";
 import { MdSevereCold } from "react-icons/md";
 import "../styles/build.css";
+import { createFileRoute } from "@tanstack/react-router";
 
-const Build = () => {
+export const Route = createFileRoute("/build")({
+  component: Build,
+});
+
+function Build () {
   const [selectedStep, setSelectedStep] = useState(null);
   const [selectedName, setSelectedName] = useState("Processor");
   const [selectedProducts, setSelectedProducts] = useState({});
