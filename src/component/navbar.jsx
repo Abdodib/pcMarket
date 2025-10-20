@@ -44,6 +44,7 @@ const Navbar = () => {
           </Link>
         </li>
 
+        {/*
         <div className="nav-icons">
           <li>
             <Link to="/account">
@@ -60,6 +61,7 @@ const Navbar = () => {
             </Link>
           </li>
         </div>
+        */}
       </ul>
 
       <button className="menu-toggle" onClick={toggleMenu}>
