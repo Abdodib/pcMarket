@@ -15,7 +15,7 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="logo">
-        <Link to="/home">
+        <Link to="/">
           <h1>
             PC <span>Market</span>
           </h1>
@@ -24,7 +24,7 @@ const Navbar = () => {
 
       <ul className={`nav-links ${isOpen ? "open" : ""}`}>
         <li>
-          <Link to="/home">
+          <Link to="/">
             <h2>Home</h2>
           </Link>
         </li>
