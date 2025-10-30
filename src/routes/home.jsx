@@ -15,7 +15,7 @@ import deal1 from "../assets/deal1.jpg";
 import deal2 from "../assets/deal2.jpg";
 import { TiShoppingCart } from "react-icons/ti";
 
-export const Route = createFileRoute("/")({
+export const Route = createFileRoute("/home")({
       component: Home,
 });
 
